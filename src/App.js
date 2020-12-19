@@ -1,13 +1,14 @@
 import React from 'react';
 import './App.css';
-import ListsContainer from './containers.js/ListsContainer';
+import ListsContainer from './containers/ListsContainer';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import Home from './components/Home'
 import ListOfLists from './components/ListOfLists'
 import Navigation from './components/Navigation'
-import ItemsContainer from './containers.js/ItemsContainer'
-import ListItems from './containers.js/ListItems'
+import ItemsContainer from './containers/ItemsContainer'
+import ListItems from './containers/ListItems'
 import ListsForm from './components/ListsForm';
+import ItemsForm from './components/ItemsForm';
 
 
 function App () {

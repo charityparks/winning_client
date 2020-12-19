@@ -1,57 +1,57 @@
-// import React, { Component } from 'react';
-// import { connect } from 'react-redux'
-// import { addItem } from '../actions/items'
+import React, { Component } from 'react';
+import { connect } from 'react-redux'
+import { addItem } from '../actions/itemsActions'
 
-// class ItemsForm extends Component {
+class ItemsForm extends Component {
 
-//     constructor(props) {
-//         super(props)
-//         this.state = {
-//             name: "", 
-//             category_id: this.props.categoryID
-//         }
-//     }
+    constructor(props) {
+        super(props)
+        this.state = {
+            name: "", 
+            list_id: this.props.listID
+        }
+    }
 
-//     handleOnChange = event => {
-//         this.setState({
-//             [event.target.name]: event.target.value
-//         })
-//     }
+    handleOnChange = event => {
+        this.setState({
+            [event.target.name]: event.target.value
+        })
+    }
 
-//     handleOnSubmit = event => {
-//         event.preventDefault()
-//         const item = {
-//             name: this.state.name,
-//             category_id: this.props.categoryID
-//         }
-//         this.props.addItem(item)
-//         this.resetForm()
-//     }
+    handleOnSubmit = event => {
+        event.preventDefault()
+        const item = {
+            name: this.state.name,
+            list_id: this.props.listID
+        }
+        this.props.addItem(item)
+        this.resetForm()
+    }
 
-//     resetForm = () => {
-//         this.setState({
-//             name: "", 
-//             category_id: this.props.categoryID
-//         })
-//     }
+    resetForm = () => {
+        this.setState({
+            name: "", 
+            list_id: this.props.listID
+        })
+    }
 
-//     render() {
-//         return (
-//             <div>
-//                 <form onSubmit={event => this.handleOnSubmit(event)}>
-//                     <input
-//                         type="text"
-//                         placeholder="New item name"
-//                         name="name"
-//                         onChange={this.handleOnChange}
-//                         value={this.state.name}
-//                     />
-//                     <br />
-//                     <input type="submit" value="Add new item"/>
-//                 </form>
-//             </div>
-//         );
-//     }
-// }
+    render() {
+        return (
+            <div>
+                <form onSubmit={event => this.handleOnSubmit(event)}>
+                    <input
+                        type="text"
+                        placeholder="New item"
+                        name="name"
+                        onChange={this.handleOnChange}
+                        value={this.state.name}
+                    />
+                    <br />
+                    <input type="submit" value="Add new item"/>
+                </form>
+            </div>
+        );
+    }
+}
 
-// export default connect(null, { addItem })(ItemsForm);
+export default connect(null, { addItem })(ItemsForm);

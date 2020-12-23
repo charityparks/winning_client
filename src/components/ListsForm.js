@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { addList } from '../actions/listsActions'
 import { connect } from 'react-redux'
 
-
 class ListsForm extends Component {
 
     state = {
@@ -25,20 +24,25 @@ class ListsForm extends Component {
 
     render() {
         return (
+        
         <form onSubmit={this.handleSubmit}>
 
-            <label>List Title</label>
+            <label>List Title:</label>
             <input type='text' value={this.state.title} onChange={this.handleChange} name='title'/><br></br>
 
-            <label>List Description</label>
+            <label>List Description:</label>
             <input type='text' value={this.state.description} onChange={this.handleChange} name='description'/><br></br><br></br>
 
             <input type='submit' value='Create List' />
 
-       </form>
+
+        </form>
+      
         )
     }
+   
 }
+
 export default connect(null, { addList })(ListsForm);
 
 //local state is component state

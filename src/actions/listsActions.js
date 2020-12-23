@@ -15,7 +15,7 @@ export const addList = (list) => {
             headers: { 'Content-Type': 'application/json'}
         })
         .then(resp => resp.json())
-        .then(list => dispatch({ type: 'ADD_LIST', payload: list}))
+        .then(list => dispatch({ type: 'ADD_LIST', list}))
     }
 }
 
@@ -26,25 +26,3 @@ export const addList = (list) => {
 
 
 
-// export const fetchCategories = () => {
-//     return dispatch => {
-//         fetch('http://localhost:3090/categories')
-//         .then(resp => resp.json())
-//         .then(categories => dispatch({ type: 'FETCH_CATEGORIES', categories }))
-//     }
-// }
-
-// export const addCategory = category => {
-//     return dispatch => {
-//         fetch('http://localhost:3090/categories', {
-//             method: "POST",
-//             headers: {
-//                 "Content-Type": "application/json",
-//                 "Accept": "application/json" 
-//             },
-//             body: JSON.stringify(category)
-//         })
-//         .then(resp => resp.json())
-//         .then(category => dispatch({ type: 'ADD_CATEGORY', category}))
-//     }
-// }

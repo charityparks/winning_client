@@ -22,6 +22,7 @@ const Navigation = () => {
                 }}
             >Home
             </NavLink>
+            
             <NavLink
                 to="/lists"
                 exact
@@ -32,6 +33,7 @@ const Navigation = () => {
             >
                 Lists
             </NavLink>
+
             <NavLink
                 to="/items"
                 exact

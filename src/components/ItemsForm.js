@@ -49,7 +49,6 @@ class ItemsForm extends Component {
                     <br />
                     <input type="submit" value="Add new item"/>
                 </form>
-                <ItemsForm />
             </div>
         
         );

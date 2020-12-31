@@ -7,7 +7,6 @@ import ListOfLists from './components/ListOfLists'
 import Navigation from './components/Navigation'
 // import ItemsContainer from './containers.js/ItemsContainer'
 import ListItems from './containers.js/ListItems'
-
 // import List from './components/List'
 
 

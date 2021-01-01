@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import { fetchLists } from '../actions/listsActions'
+// import ListOfLists from '../components/ListOfLists'
 import ListsForm from '../components/ListsForm'
 
 class ListsContainer extends Component {
@@ -12,6 +13,8 @@ class ListsContainer extends Component {
         return (
             <div>
                 <ListsForm />
+                {/* <ListOfLists list /> */}
+
             </div>
         );
     }

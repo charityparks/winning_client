@@ -4,10 +4,8 @@ import { connect } from 'react-redux'
 import ItemsContainer from './ItemsContainer';
 
 
-// const ListItems = (props) => {
-    // let itemsList = items.filter(i => i.list_id === listID)
-    const ListItems = ({ listID, items, deleteItem }) => {
-            let itemsList = items.filter(i => i.list_id === listID)
+const ListItems = ({ listID, items, deleteItem }) => {
+    let itemsList = items.filter(i => i.list_id === listID)
 
     return (
         <div>
@@ -25,5 +23,4 @@ const mapStateToProps = state => {
 
 export default connect(mapStateToProps)(ListItems);
 
-// export default ListItems;
 

@@ -1,7 +1,7 @@
 // create an action that will fetch all lists from the api
 export const fetchLists = () => {
     return (dispatch) => {
-        fetch('http://127.0.0.1:3001/lists')
+        return fetch('http://127.0.0.1:3001/lists')
         .then(resp => resp.json())
         .then(lists => dispatch({ type: 'FETCH_LISTS', lists }))
     }
@@ -9,7 +9,7 @@ export const fetchLists = () => {
 
 export const addList = (list) => {
     return dispatch => {
-        fetch('http://127.0.0.1:3001/lists', {
+        return fetch('http://127.0.0.1:3001/lists', {
             method: 'POST',
             body: JSON.stringify(list),
             headers: { 'Content-Type': 'application/json'}

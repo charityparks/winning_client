@@ -35,13 +35,13 @@ const Navigation = () => {
             </NavLink>
 
             <NavLink
-                to="/items"
+                to="/aboutMe"
                 exact
                 style={links}
                 activeStyle={{
                     background: 'darkblue'
              }}
-            >Items
+            >AboutMe
             </NavLink>
             
         </div>

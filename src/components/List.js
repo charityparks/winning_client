@@ -6,8 +6,6 @@ import ListItems from '../containers.js/ListItems'
 const List = () => {
     return (
             <div>
-                {/* <Item />
-                <ItemsForm /> */}
                 <ListItems />
             </div>
 

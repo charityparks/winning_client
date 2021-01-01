@@ -26,16 +26,15 @@ class ListsForm extends Component {
         return (
         
         <form onSubmit={this.handleSubmit}>
-
+            <br></br>
+            <br></br>
             <label>List Title:</label>
-            <input type='text' value={this.state.title} onChange={this.handleChange} name='title'/><br></br>
+            <input type='text' value={this.state.title} onChange={this.handleChange} name='title'/><br></br><br></br>
 
             <label>List Description:</label>
             <input type='text' value={this.state.description} onChange={this.handleChange} name='description'/><br></br><br></br>
 
             <input type='submit' value='Create List' />
-
-
         </form>
       
         )

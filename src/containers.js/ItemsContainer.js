@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import Item from '../components/Item'
+// import Item from '../components/Item'
 import ItemsForm from '../components/ItemsForm'
 import ListItems from './ListItems'
 import { connect } from 'react-redux'
@@ -7,33 +7,21 @@ import { fetchItems, deleteItem } from '../actions/itemsActions'
 
 
 class ItemsContainer extends Component {
-    state={
-        items: [],
-        item: ""
+
+    componentDidMount() {
+        this.props.fetchItems()
     }
 
-    handleOnClick = (event) => {
-        this.setState({
-            item: event.target.id
-        })
-    }
-    render() { 
-        const items = this.state.items.map((items, i) => {
-            return <Item key={i} item={items} handleClick={this.handleOnClick} />
-
-        })
+    render() {
         return (
             <div>
-                <h3>List Items!</h3>
-                <br/>
-                {items}
-                <ItemsForm />
-                <ListItems />
-
+                <ListItems categoryID={this.props.list.id} items={this.props.items} deleteItem={this.props.deleteItem} />
+                <ItemsForm listID={this.props.list.id} />
             </div>
-        )
+        );
     }
 }
+
 const mapStateToProps = ({ items }) => ({ items })
 
 export default connect(mapStateToProps, { fetchItems, deleteItem })(ItemsContainer);

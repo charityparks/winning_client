@@ -17,7 +17,7 @@ class ItemsForm extends Component {
             [event.target.name]: event.target.value
         })
     }
-
+    
     handleOnSubmit = event => {
         event.preventDefault()
         const item = {

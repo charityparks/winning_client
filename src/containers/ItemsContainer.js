@@ -17,6 +17,7 @@ class ItemsContainer extends Component {
             <div>
                 <ListItems categoryID={this.props.list.id} items={this.props.items} deleteItem={this.props.deleteItem} />
                 <ItemsForm listID={this.props.list.id} />
+                <ItemsForm />
             </div>
         );
     }

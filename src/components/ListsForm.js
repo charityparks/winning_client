@@ -19,7 +19,9 @@ class ListsForm extends Component {
 
     handleSubmit = e => {
         e.preventDefault()
-        this.props.addList(this.state)
+        this.props.addList(this.state);
+        // title("");
+        // description("");
     }
 
     render() {

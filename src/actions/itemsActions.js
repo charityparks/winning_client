@@ -1,6 +1,5 @@
 // create an action that will fetch all lists from the api
 const BASE_URL = "http://localhost:3001"
-// i think the url is wrong and doesn't match routes
 
 export const fetchItems = () => {
     return (dispatch) => {
@@ -12,10 +11,10 @@ export const fetchItems = () => {
 
 export const addItem = (item) => {
     return dispatch => {
-        fetch(BASE_URL + "/items", {
+        fetch(BASE_URL + "/lists/id/items", {   
             method: 'POST',
             body: JSON.stringify(item),
-            headers: { 'Content-Type': 'application/json'}
+            headers: { 'Content-Type': 'application/json' }
         })
         .then(resp => resp.json())
         .then(item => dispatch({ type: 'ADD_ITEM', payload: item }))

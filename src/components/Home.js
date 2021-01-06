@@ -6,7 +6,7 @@ const Home = () => {
     return (
         <div>
             <h1>Home Page!</h1>
-            <h3><section>This app is a Self Improvement app to help you stayed focused on your goals. <br />By keeping focus you are more likely to complete your tasks!</section>  </h3>
+            <h3><section>This app is a Self Improvement app to help you stayed focused on your goals task by task. <br />By keeping focus you are more likely to reach your goals!</section>  </h3>
             <ListsForm />
         
             {/* <ListsContainer /> */}

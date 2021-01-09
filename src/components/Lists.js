@@ -8,12 +8,10 @@ class Lists extends Component {
         this.props.fetchLists()
     }
     render() {
-        
         return (
             <div>
                 {this.props.lists.data && this.props.lists.data.map(list =>
-                    
-                    
+                                        
                     <Link to={`/list/${list.id}/items`}><ul key={list.id}>
                               <b>{list.attributes.title}</b><br/><i>
                              Description:{list.attributes.description}</i><br></br>

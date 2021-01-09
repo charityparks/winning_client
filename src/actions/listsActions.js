@@ -2,7 +2,6 @@
 export const fetchLists = () => {
     return (dispatch) => {
         return fetch('http://127.0.0.1:3001/lists', {
-            // credentials: "include",
             method: "GET",
             headers: {
                 "Content-Type": "application/json"}

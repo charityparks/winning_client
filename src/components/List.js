@@ -1,9 +1,11 @@
 import React from 'react'
 import { connect } from 'react-redux'
-// import ItemsContainer from '../containers/ItemsContainer'
+import ItemsContainer from '../containers/ItemsContainer'
 import ListItems from '../containers/ListItems'
 
 const List = (props) => {
+const list = props.lists.filter(l => l.id == props.match.params.id)
+// console.log(list)
     return (
         <div>
             <h1>This is a list</h1>
@@ -15,15 +17,14 @@ const List = (props) => {
                 </ul>
             )}
             <ListItems />
+            <ItemsContainer />
         </div>         
     )
 }    
-// let itemsList = items.data.filter(i => i.list_id === listID) 
-// list.match.params.id
 
 const mapStateToProps = (state) => {
     // return {lists: state.lists}
-    return {lists: state.lists.filter}
+    return {lists: state.lists.data}
 
 }
 

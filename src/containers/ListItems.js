@@ -1,27 +1,30 @@
 import React from 'react';
 import ItemsForm from '../components/ItemsForm'
 import { connect } from 'react-redux'
-// import ItemsContainer from './ItemsContainer';
+import ItemsContainer from './ItemsContainer';
+import { fetchItems } from '../actions/itemsActions'
 
 
 const ListItems = ({ listID, items, deleteItem }) => {
-    // console.log(listID)
-    let itemsList = items.filter(i => i.list_id === listID)
-
+    
+    // let itemsList = items.data.filter(i => i.list_id === listID)
+let itemsList = []
     return (
         <div>
             <ItemsForm />
-            {/* <ItemsContainer items={items} /> */}
+            <ItemsContainer items={items} />
+            
             {itemsList.map(item => {
-                return (<p key={item.id}>{item.name} <button onClick={() => deleteItem(item)}>✓</button></p>)
+                return (<li key={item.id}>{item.name} <button onClick={() => deleteItem(item)}>✓</button></li>)
             })}  
         </div>
     );
 };
 const mapStateToProps = state => {
+    
     return { items: state.items }
 }
 
-export default connect(mapStateToProps)(ListItems);
+export default connect(mapStateToProps, { fetchItems })(ListItems);
 
 

@@ -10,14 +10,16 @@ class ItemsContainer extends Component {
     componentDidMount() {
         this.props.fetchItems()
     }
-
     render() {
-        // console.log(this.props)
         return (
             <div>
-                <ListItems listID={this.props.list.id} items={this.props.items} deleteItem={this.props.deleteItem} />
+                <ListItems listID={this.props.list.id} 
+                           items={this.props.items} 
+                           deleteItem={this.props.deleteItem} />
+
                 <ItemsForm listID={this.props.list.id} />
-                <ItemsForm />
+                
+                <ItemsForm {...this.props.list} />
             </div>
         );
     }

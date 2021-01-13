@@ -24,6 +24,13 @@ class ListsForm extends Component {
         // description("");
     }
 
+    // resetForm = () => {
+    //     this.setState({
+    //         name: "", 
+    //         list_id: this.props.listID
+    //     })
+    // }
+
     render() {
         return (
         

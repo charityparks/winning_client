@@ -15,7 +15,7 @@ class Lists extends Component {
                     <Link to={`/list/${list.id}/items`}><ul key={list.id}>
                               <b>{list.attributes.title}</b><br/><i>
                              Description:{list.attributes.description}</i><br></br>
-                             {list.attributes.items.map(item => <ul key={item.id}><h6>{item.name}</h6></ul>)}
+                             {/* {list.attributes.items.map(item => <ul key={item.id}><h6>{item.name}</h6></ul>)} */}
 
                     </ul>
                     </Link>

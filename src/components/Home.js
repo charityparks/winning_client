@@ -1,6 +1,6 @@
 import React from 'react'
 import ListsForm from './ListsForm'
-// import ListsContainer from '../containers.js/ListsContainer'
+// import ListsContainer from '../containers/ListsContainer'
 
 const Home = () => {
     return (

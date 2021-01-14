@@ -20,10 +20,8 @@ function App () {
             <Route exact path="/aboutMe" component={AboutMe} />
             {/* <Route exact path="/list/:id/items" render={(
               <List {...List} /> */}
-            <Route exact path="/list/:id/items" render={(props) => (
-              <List {...props} />
-            )} />
-
+            <Route exact path="/list/:id" component={List}/>
+            
           </Switch>
                     
         </div>

@@ -1,11 +1,13 @@
-export const listsReducer = (state = [], action) => {
+export const listsReducer = (state = {lists: []}, action) => {
     switch (action.type) {
         case 'FETCH_LISTS':
-            return action.lists
-        case 'ADD_LIST':
-            return [...state, action.list]
+            return {...state, lists: action.lists.data}
+        case 'FETCH_LIST':
+            return {...state, lists: action.payload}
+        case 'ADD_LIST':            
+            return { ...state, lists: [...state.lists, action.list.data] }
         case 'DELETE_LIST':
-            return state.filter(i => i.id !== action.list.id)
+            return {...state, lists: state.filter(i => i.id !== action.list.id)}
 
         default:
             return state

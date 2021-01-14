@@ -3,6 +3,7 @@ export const itemsReducer = (state = [], action) => {
         case 'FETCH_ITEMS':
             return action.items
         case 'ADD_ITEM':
+            console.log(state);
             return [...state, action.item]
         case 'DELETE_ITEM':
             return state.filter(i => i.id !== action.item.id)

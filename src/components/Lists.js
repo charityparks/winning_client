@@ -7,12 +7,13 @@ class Lists extends Component {
     componentDidMount() {
         this.props.fetchLists()
     }
-    render() {
+    render() {  
+        console.log(this.props);      
         return (
             <div>
-                {this.props.lists.data && this.props.lists.data.map(list =>
+                {this.props.lists.length > 0 && this.props.lists.map(list =>
                                         
-                    <Link to={`/list/${list.id}/items`}><ul key={list.id}>
+                    <Link key={list.id} to={`/list/${list.id}`}><ul key={list.id}>
                               <b>{list.attributes.title}</b><br/><i>
                              Description:{list.attributes.description}</i><br></br>
                              {/* {list.attributes.items.map(item => <ul key={item.id}><h6>{item.name}</h6></ul>)} */}
@@ -22,10 +23,13 @@ class Lists extends Component {
 
                 )}
             </div>  
+           
+            
         ) 
     } 
 }     
-const mapStateToProps = state => {
-    return {lists: state.lists} 
+const mapStateToProps = ({lists}) => {  
+    
+    return {lists: lists.lists} 
 }
 export default connect(mapStateToProps, { fetchLists })(Lists)

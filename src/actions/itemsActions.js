@@ -9,9 +9,9 @@ export const fetchItems = () => {
     }
 }
 
-export const addItem = (item) => {
+export const addItem = (item, id) => {
     return dispatch => {
-        fetch(BASE_URL + "/lists/id/items", {   
+        fetch(BASE_URL + `/lists/${id}/items`, {   
             method: 'POST',
             body: JSON.stringify(item),
             headers: { 'Content-Type': 'application/json' }

@@ -26,13 +26,6 @@ class ListsForm extends Component {
          })
     }
 
-    // resetForm = () => {
-    //     this.setState({
-    //         name: "", 
-    //         list_id: this.props.listID
-    //     })
-    // }
-
     render() {
         return (
         
@@ -46,13 +39,12 @@ class ListsForm extends Component {
             <input type='text' value={this.state.description} onChange={this.handleChange} name='description'/><br></br><br></br>
 
             <input type='submit' value='Create List' />
+
         </form>
-      
         )
     }
-   
-}
 
+}
 export default connect(null, { addList })(ListsForm);
 
 //local state is component state

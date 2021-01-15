@@ -7,33 +7,27 @@ class ItemsForm extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            name: ""
-            
+            name: ""   
         }
     }
-
     handleOnChange = event => {
         this.setState({
             [event.target.name]: event.target.value
         })
     }
-    
     handleOnSubmit = event => {
         event.preventDefault()
         const item = {
-            name: this.state.name
-            
+            name: this.state.name    
         }
         this.props.addItem(item, this.props.listID)
         this.resetForm()
     }
-
     resetForm = () => {
         this.setState({
             name: ""
         })
     }
-
     render() {        
         return (
             <div>

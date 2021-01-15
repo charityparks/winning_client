@@ -19,8 +19,6 @@ export const fetchList = (id) => async (dispatch) => {
         .then(list => dispatch({ type: 'FETCH_LIST', payload: list.data }))
     
     }
-
-
 export const addList = (list) => {
     return dispatch => {
         return fetch('http://127.0.0.1:3001/lists', {

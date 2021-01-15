@@ -1,12 +1,12 @@
 export const itemsReducer = (state = [], action) => {
     switch(action.type){
         case 'FETCH_ITEMS':
-            return action.items
+            return [...state, action.items]
         case 'ADD_ITEM':
-            console.log(state);
-            return [...state, action.item]
+            return {...state, items: [...state.items, action.items]}
         case 'DELETE_ITEM':
-            return state.filter(i => i.id !== action.item.id)
+            debugger
+            return state.items.filter(i => i.id !== action.item.id)
 
         default:
             return state

@@ -18,8 +18,6 @@ function App () {
             <Route exact path="/" component={Home} />
             <Route exact path="/lists" component={ListsContainer} />
             <Route exact path="/aboutMe" component={AboutMe} />
-            {/* <Route exact path="/list/:id/items" render={(
-              <List {...List} /> */}
             <Route exact path="/list/:id" component={List}/>
             
           </Switch>

@@ -11,9 +11,7 @@ export const fetchLists = () => {
     }
 }
 export const fetchList = (id) => async (dispatch) => {
-    //   const resp = await fetch(`http://127.0.0.1:3001/lists/${id}`)
-    //     const list = await resp.json()
-    //     dispatch({ type: 'FETCH_LIST', payload: list.data })
+    
        fetch(`http://127.0.0.1:3001/lists/${id}`)
         .then(resp => resp.json())
         .then(list => dispatch({ type: 'FETCH_LIST', payload: list.data }))

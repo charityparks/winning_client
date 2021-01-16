@@ -11,12 +11,12 @@ const ListItems = ({ listID, items, deleteItem }) => {
 let itemsList = []
     return (
         <div>
-            <ItemsForm />
-            <ItemsContainer items={items} />
+            {/* <ItemsForm />
+            <ItemsContainer items={items} /> */}
             
-            {itemsList.map(item => {
-                return (<li key={item.id}>{item.name} <button onClick={() => deleteItem(item)}>✓</button></li>)
-            })}  
+            {/* {itemsList.map(item => {
+                return (<div><li key={item.id}>{item.name} </li><button onClick={() => deleteItem(item)}>Delete</button></div>)
+            })}   */}
         </div>
     );
 };

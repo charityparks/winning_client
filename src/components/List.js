@@ -20,7 +20,7 @@ componentDidMount() {
              {
                 <ul key={list.id}>
                     <h1><b>{list.attributes.title}</b></h1>
-                    {list.attributes.items.map(item => <ul key={item.id}><h3>{item.name}</h3></ul>)}
+                    {list.attributes.items.map(item => <ul key={item.id}><li>{item.name} <button>Delete</button></li>  </ul>)}
                 </ul>
              }
     

@@ -17,7 +17,9 @@ export const addItem = (item, id) => {
             headers: { 'Content-Type': 'application/json' }
         })
         .then(resp => resp.json())
-        .then(item => dispatch({ type: 'ADD_ITEM', payload: item }))
+        .then(item => {            
+            dispatch({ type: 'ADD_ITEM_TO_LIST', payload: item.data.attributes})
+        })
     }
 }
 export const deleteItem = item => {

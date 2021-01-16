@@ -11,14 +11,14 @@ class ItemsContainer extends Component {
     render() {
         return (
             <div>
-                <ListItems listID={this.props.list.id} 
+                {/* <ListItems listID={this.props.list.id} 
                            items={this.props.items} 
                            deleteItem={this.props.deleteItem} 
-                           addItem={this.props.addItems} />
+                           addItem={this.props.addItems} /> */}
 
                 {/* <ItemsForm listID={this.props.list.id} /> */}
                                
-                <ItemsForm {...this.props.list} />
+                {/* <ItemsForm {...this.props.list} /> */}
             </div>
         );
     }

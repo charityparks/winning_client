@@ -6,6 +6,8 @@ export const listsReducer = (state = {lists: []}, action) => {
             return {...state, lists: action.payload}
         case 'ADD_LIST':    
             return { ...state, lists: [...state.lists, action.list.data] }
+        case 'ADD_ITEM_TO_LIST':            
+            return { ...state, lists: {...state.lists, attributes: {...state.lists.attributes, items: [...state.lists.attributes.items, action.payload]} }}
         case 'DELETE_LIST':
             return {...state, lists: state.filter(i => i.id !== action.list.id)}
 

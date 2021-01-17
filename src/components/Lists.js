@@ -8,16 +8,15 @@ class Lists extends Component {
         this.props.fetchLists()
     }
     render() {  
-        // console.log(this.props);      
         return (
-            <div>
+            <div className="form">
                 {this.props.lists.length > 0 && this.props.lists.map(list =>
                                         
                     <ul key={list.id}>
                         <li>
-                            <Link key={list.id} to={`/list/${list.id}`}> <b>{list.attributes.title}</b><br/><i>
+                            <Link key={list.id} to={`/list/${list.id}`}> <b>{list.attributes.title}</b><br/></Link><i>
                              Description:{list.attributes.description}</i> 
-                              </Link><button>Delete</button>
+                              <button>Delete</button>
                         </li> 
                     </ul>
                 )}

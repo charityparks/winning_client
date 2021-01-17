@@ -30,7 +30,7 @@ class ItemsForm extends Component {
     }
     render() {        
         return (
-            <div>
+            <div className="form">
                 <form onSubmit={event => this.handleOnSubmit(event)}>
                     <input
                         type="text"
@@ -38,7 +38,9 @@ class ItemsForm extends Component {
                         name="name"
                         onChange={this.handleOnChange}
                         value={this.state.name}
+            
                     />
+                   
                     <br />
                     <input type="submit" value="Add new item"/>
                 </form>

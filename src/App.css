@@ -1,5 +1,20 @@
 .App {
-    text-align: left;
-    background-color: rgb(255, 214, 80);
+
+    text-align: left; 
+    /* background-color: rgb(255, 80, 109); */
+    background-image: url('gray.jpg');
+     
+}
+.center {
+  display: block;
+  margin-left: 1;
+  margin-right: auto;
+  width: 50%;
+}
+.form {
+        background-color: #3CBC8D;
+        color: white;
        
 }
+
+

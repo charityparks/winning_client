@@ -22,9 +22,12 @@ export const addItem = (item, id) => {
         })
     }
 }
-export const deleteItem = item => {
-    return {
-        type: 'DELETE_ITEM', 
-        item
-    }
-}
+// export const deleteItem = item => {
+//     return dispatch => {
+//         fetch(BASE_URL + `/lists/${id}/items`, {
+//             method: 'DETETE',
+//         })
+//         type: 'DELETE_ITEM', 
+//         item
+//     }
+// }

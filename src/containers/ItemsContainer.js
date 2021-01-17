@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import ItemsForm from '../components/ItemsForm'
-import ListItems from './ListItems'
 import { connect } from 'react-redux'
 import { fetchItems, deleteItem, addItem } from '../actions/itemsActions'
+import ListsContainer from './ListsContainer'
+import List from './ListsContainer'
 
 class ItemsContainer extends Component {
     componentDidMount() {
@@ -11,6 +11,8 @@ class ItemsContainer extends Component {
     render() {
         return (
             <div>
+                <List />
+                <ListsContainer />
                 {/* <ListItems listID={this.props.list.id} 
                            items={this.props.items} 
                            deleteItem={this.props.deleteItem} 

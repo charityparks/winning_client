@@ -35,6 +35,17 @@ const Navigation = () => {
             </NavLink>
 
             <NavLink
+                to="/popularLists"
+                exact
+                style={links}
+                activeStyle={{
+                    background: 'darkblue'
+                }}
+            >
+                Popular Lists
+            </NavLink>
+
+            <NavLink
                 to="/aboutMe"
                 exact
                 style={links}

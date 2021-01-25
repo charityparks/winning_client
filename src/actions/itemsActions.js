@@ -1,7 +1,7 @@
 // create an action that will fetch all lists from the api
 const BASE_URL = "http://localhost:3001"
 
-export const fetchItems = () => {
+export const fetchItems = () => {  
     return (dispatch) => {
         fetch(BASE_URL + "/items")
         .then(resp => resp.json())
